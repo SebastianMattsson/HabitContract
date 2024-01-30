@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Habits</title>
+    <link rel="stylesheet" href="../dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/9142986a7b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="menuContainer">
+      <div class="logo">
+        <a href="#">Habit<span>Contract</span></a>
+      </div>
+      <div class="menuProfileSection">
+        <h2>BasseBasooka</h2>
+        <img src="../images/sebbe.jpeg" alt="" />
+      </div>
+      <ul class="menuItems">
+        <li id="menuItemDashboard">
+          <i class="fa-solid fa-gauge"></i>Dashboard
+        </li>
+        <li id="menuItemHabits" class="menuItemActive">
+          <i class="fa-solid fa-list"></i>Habits
+        </li>
+        <li id="menuItemContracts">
+          <i class="fa-solid fa-file-contract"></i>Contracts
+        </li>
+        <li id="menuItemAchievements">
+          <i class="fa-solid fa-trophy"></i>Achievements
+        </li>
+        <li id="menuItemProfile"><i class="fa-solid fa-user"></i>Profile</li>
+        <li id="menuItemLogOut">
+          <i class="fa-solid fa-right-from-bracket"></i>Log out
+        </li>
+      </ul>
+    </div>
+    <div class="interface" id="interface">
+      <div class="changeDayContainer">
+        <i class="fa-solid fa-circle-left"></i>
+        <h1>Today</h1>
+        <i class="fa-solid fa-circle-right"></i>
+      </div>
+      <div class="habitsContainer">
+        <div class="userHabits">
+          <div class="habitsProfile">
+            <h2>BasseBasooka</h2>
+            <img src="../images/sebbe.jpeg" alt="" />
+          </div>
+          <div class="tasksSection">
+            <li class="notSelected">
+              <p>Vakna 05:00</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+            <li class="notSelected">
+              <p>Drick 2 liter vatten</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+            <li class="notSelected">
+              <p>Spring en mil</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+          </div>
+        </div>
+        <div class="userHabits">
+          <div class="habitsProfile">
+            <h2>BernieBadboll</h2>
+            <img src="../images/bernie.jpeg" alt="" />
+          </div>
+          <div class="tasksSection">
+            <li class="notSelected">
+              <p>Säga till sebastian att han är vacker</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+            <li class="notSelected">
+              <p>Sova</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li class="notSelected">
+            <li class="notSelected">
+              <p>Träna</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+            <li class="notSelected">
+              <p>Gråta</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../dashboard.js" defer></script>
+  </body>
+</html>

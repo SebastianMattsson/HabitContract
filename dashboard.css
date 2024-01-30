@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #e5e7eb;
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
+}
+.menuContainer {
+  background: #111827;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+}
+.logo {
+  text-align: center;
+  padding: 2em 0;
+}
+.menuProfileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.menuProfileSection h2 {
+  font-size: 1em;
+  color: white;
+}
+.menuProfileSection img {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.logo a {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: lightgreen;
+  text-shadow: 1.5px 1.5px white;
+}
+.logo span {
+  color: lightcoral;
+}
+
+.menuItems {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.menuItems li {
+  font-size: 1em;
+  color: white;
+  list-style: none;
+  padding: 15px 0;
+}
+.menuItems li:hover {
+  cursor: pointer;
+  background: #253047;
+}
+.menuItems .menuItemActive {
+  border-left: 4px solid #fff;
+}
+.menuItems li i {
+  color: rgb(134, 141, 151);
+  margin: 0 15px 0 25px;
+}
+.menuItems li:hover i,
+.menuItems li:hover a {
+  color: #f3f4f6;
+}
+.menuItems li a {
+  font-weight: bolder;
+}
+.interface {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+.noContract {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.habitsContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 3em;
+}
+.changeDayContainer {
+  display: flex;
+  align-items: center;
+  padding: 2em 0;
+  gap: 2em;
+  font-size: 1.5em;
+}
+.changeDayContainer i {
+  color: green;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.changeDayContainer i:hover {
+  color: lightgreen;
+}
+
+.habitsProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  gap: 2em;
+}
+.habitsContainer img {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+.userHabits {
+  width: 40%;
+  height: 100%;
+}
+.userHabits li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  font-weight: bolder;
+  color: white;
+  border-radius: 12px;
+}
+
+/* .userHabits li.notSelected:hover {
+  background-color: red !important;
+}
+.userHabits li.selected:hover {
+  background-color: green !important;
+} */
+.userHabits li.selected {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 255, 0, 1)
+  );
+}
+.userHabits li.notSelected {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 0, 0, 1)
+  );
+}
+
+.userHabits i {
+  cursor: pointer;
+}
+.userHabits i:hover {
+  color: black;
+}
+
+.contractsHeader {
+  height: 7em;
+  width: 100%;
+  display: flex;
+  padding: 0em 3em;
+  align-items: center;
+  justify-content: space-between;
+}
+#btnAddContract {
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid white;
+  padding: 0.5em 0.7em;
+}
+#btnAddContract:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1),
+    rgb(6, 147, 6)
+  );
+}
+
+.createContractContainer {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.CreateContractFormContainer {
+  width: 60%;
+  height: 100%;
+  margin-top: 3em;
+}
+
+.searchBarPartnerSection {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+}
+
+.searchBarPartnerSection input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 12px 10px;
+  font-size: 1em;
+  color: white;
+}
+.searchBarPartnerSection input::placeholder {
+  color: rgba(255, 255, 255, 0.465);
+}
+.searchBarPartnerSection button i {
+  width: 2em;
+  color: white;
+}
+.searchBarPartnerSection button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #58629b;
+  cursor: pointer;
+}
+.punishmentsContainer {
+  margin-top: 2em;
+}
+.btnAddPunishment {
+  border: 0;
+  font-size: 1.2em;
+  background: transparent;
+  cursor: pointer;
+}
+.btnAddPunishment i {
+  color: green;
+  margin-left: 1em;
+}
+.punishment {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 0.5em 0;
+}
+.punishment input {
+  flex: 1;
+  padding: 1em 1em;
+  border: 0;
+  border-radius: 18px;
+  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.5);
+  outline: 0;
+  color: white;
+}
+.punishment input::placeholder {
+  color: rgba(255, 255, 255, 0.465);
+}
+.punishment select {
+  padding: 1em 1em;
+  border: 0;
+  border-radius: 18px;
+  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.5);
+  outline: 0;
+  color: white;
+}
+.punishment button {
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: red;
+  font-size: 1.2em;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.contractBtnContainer {
+  padding: 2em;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2em;
+}
+.contractBtnContainer button {
+  border: 0;
+  padding: 1em 1.5em;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bolder;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+}
+
+#btnSubmitContract {
+  background-color: green;
+}
+#btnCancelContract {
+  background: red;
+}
+
+#btnSubmitContract:hover {
+  background: darkgreen;
+}
+#btnCancelContract:hover {
+  background: darkred;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Habits</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9142986a7b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="index.html" class="logo"> HABIT<span>CONTRACT</span> </a>
+        <nav>
+          <ul class="link-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+          <ul class="button-list">
+            <li>
+              <button type="button" id="btnLogIn">SIGN IN</button>
+            </li>
+            <li><button type="button" id="btnRegister">REGISTER</button></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </header>
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Make it fun to create new habits</h1>
+          <h2>
+            Get yourself an accountability partner that keeps you accountable to
+            your new goals.
+          </h2>
+          <button class="hero-button" id="btnGetStarted">GET STARTED</button>
+        </div>
+        <div class="hero-img">
+          <img src="images/todo.png" alt="" />
+        </div>
+      </div>
+      <div class="book-section">
+        <img src="images/atomic.png" alt="" class="book-image" />
+        <div class="about">
+          <h1 class="booktitle">Atomic Habits</h1>
+          <h2 class="bookAuthor">James Clear</h2>
+          <p class="aboutbook">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            et, voluptatibus aliquam illo iusto voluptate molestiae, maiores
+            doloremque obcaecati quae molestias eligendi, recusandae suscipit.
+            Modi voluptatum delectus debitis magnam nam maxime provident ducimus
+            beatae? Est cum aliquam quo! Aliquid dolor eum voluptas eligendi
+            consequatur incidunt modi illo ut, quam minima quia consectetur
+            exercitationem reprehenderit suscipit temporibus totam error
+            mollitia quo porro ratione autem quaerat, repudiandae atque.
+            Veritatis vitae perferendis impedit sed deleniti, nihil est ducimus
+            quia debitis aspernatur necessitatibus harum!
+          </p>
+        </div>
+      </div>
+      <div class="book-section gtd">
+        <div class="about">
+          <h1 class="booktitle">Getting Things Done</h1>
+          <h2 class="bookAuthor">David Allen</h2>
+          <p class="aboutbook">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            et, voluptatibus aliquam illo iusto voluptate molestiae, maiores
+            doloremque obcaecati quae molestias eligendi, recusandae suscipit.
+            Modi voluptatum delectus debitis magnam nam maxime provident ducimus
+            beatae? Est cum aliquam quo! Aliquid dolor eum voluptas eligendi
+            consequatur incidunt modi illo ut, quam minima quia consectetur
+            exercitationem reprehenderit suscipit temporibus totam error
+            mollitia quo porro ratione autem quaerat, repudiandae atque.
+            Veritatis vitae perferendis impedit sed deleniti, nihil est ducimus
+            quia debitis aspernatur necessitatibus harum!
+          </p>
+        </div>
+        <img
+          src="images/getting-things-done-spine-367x580-1.png"
+          alt=""
+          class="book-image"
+        />
+      </div>
+      <div id="modal" class="modal">
+        <div class="modalContent">
+          <span class="close"></span>
+          <div class="modalHeader">
+            <div class="modalTabs">
+              <button type="button" id="signInTab">SIGN IN</button>
+              <button type="button" id="signUpTab">SIGN UP</button>
+            </div>
+          </div>
+          <div class="modalBody" id="modalBodySignIn">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+            />
+            <p class="errorMessage" id="errorUsername"></p>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <p class="errorMessage" id="errorPassword"></p>
+            <p class="errorMessage" id="errorMessage"></p>
+            <div class="rememberMe">
+              <input type="checkbox" id="rememberMe" />
+              <p>Remember me</p>
+            </div>
+            <div class="modalButtons">
+              <button type="button" id="modalBtnLogIn">SIGN IN</button>
+              <button type="button" id="modalBtnCancelSignIn">CANCEL</button>
+            </div>
+          </div>
+          <div class="modalBody" id="modalBodySignUp">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="registerUsername"
+              placeholder="Username"
+            />
+            <p class="errorMessage" id="errorRegisterUsername"></p>
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="registerEmail"
+              placeholder="email"
+            />
+            <p class="errorMessage" id="errorEmail"></p>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="registerPassword"
+              placeholder="Password"
+            />
+            <p class="errorMessage" id="errorRegisterPassword"></p>
+            <label for="rePassword">Re-enter Password</label>
+            <input
+              type="password"
+              name="rePassword"
+              id="rePassword"
+              placeholder="Re-enter Password"
+            />
+            <p class="errorMessage" id="errorRegisterRePassword"></p>
+
+            <p class="errorMessage" id="errorRegisterMessage"></p>
+
+            <div class="modalButtons">
+              <button type="button" id="modalBtnRegister">REGISTER</button>
+              <button type="button" id="modalBtnCancelRegister">CANCEL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

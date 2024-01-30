@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Habits</title>
+    <link rel="stylesheet" href="../dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/9142986a7b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="menuContainer">
+      <div class="logo">
+        <a href="#">Habit<span>Contract</span></a>
+      </div>
+      <div class="menuProfileSection">
+        <h2>BasseBasooka</h2>
+        <img src="../images/sebbe.jpeg" alt="" />
+      </div>
+      <ul class="menuItems">
+        <li id="menuItemDashboard">
+          <i class="fa-solid fa-gauge"></i>Dashboard
+        </li>
+        <li id="menuItemHabits"><i class="fa-solid fa-list"></i>Habits</li>
+        <li id="menuItemContracts" class="menuItemActive">
+          <i class="fa-solid fa-file-contract"></i>Contracts
+        </li>
+        <li id="menuItemAchievements">
+          <i class="fa-solid fa-trophy"></i>Achievements
+        </li>
+        <li id="menuItemProfile"><i class="fa-solid fa-user"></i>Profile</li>
+        <li id="menuItemLogOut">
+          <i class="fa-solid fa-right-from-bracket"></i>Log out
+        </li>
+      </ul>
+    </div>
+    <div id="interface" class="interface">
+      <div class="contractsHeader">
+        <p></p>
+        <h1>Contracts</h1>
+        <button id="btnAddContract" type="button" title="New Contract">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <div class="createContractContainer" id="createContractContainer">
+        <div class="CreateContractFormContainer">
+          <div class="searchBarPartnerSection">
+            <input
+              type="text"
+              id="searchPartner"
+              placeholder="Search for a accountability partner"
+            />
+            <button type="button" id="btnSearchPartner">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="punishmentsContainer">
+            <div class="addPunishment">
+              <button class="btnAddPunishment" id="btnAddPunishment">
+                Add Punishment<i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div class="addedPunishmentContainer" id="addedPunishmentContainer">
+              <div class="punishment"></div>
+            </div>
+            <div class="contractBtnContainer">
+              <button type="submit" id="btnSubmitContract">Submit</button>
+              <button type="button" id="btnCancelContract">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="noContract" id="noContract">
+        <h1>No Contracts click the button to create a new contract</h1>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../dashboard.js" defer></script>
+  </body>
+</html>

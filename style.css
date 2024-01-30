@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+button {
+  opacity: 1;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5em;
+  padding: 1em 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: 2rem;
+  color: lightgreen;
+  text-shadow: 1.5px 1.5px white;
+}
+.logo span {
+  color: lightcoral;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-left: 2em;
+  justify-content: flex-end;
+  gap: 4em;
+}
+
+header nav .link-list {
+  list-style: none;
+  display: flex;
+  font-size: 1.2em;
+  gap: 3em;
+  font-weight: bolder;
+}
+
+.nav-profile a {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: white;
+  gap: 0.4em;
+}
+.nav-profile {
+  padding: 0.2em 0.5em;
+}
+.nav-profile:hover,
+.nav-profile a:hover {
+  background-color: lightgreen;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out, color 1s ease-out;
+}
+header nav img {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  border: 2px solid white;
+}
+
+header nav .button-list {
+  margin-left: 2em;
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+header nav ul li {
+  display: block;
+  font-size: 1em;
+}
+
+nav .link-list a:hover {
+  color: lightgreen;
+}
+nav .link-list a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: lightgreen;
+  width: 0%;
+  transition: all ease-in-out 300ms;
+}
+nav a:hover::after {
+  width: 100%;
+}
+header nav ul li a {
+  color: white;
+}
+header nav ul li button {
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 1em;
+  font-weight: bolder;
+  background: lightgreen;
+}
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero-content {
+  width: 40%;
+  height: auto;
+  align-self: center;
+}
+.hero-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hero-content h2 {
+  width: 80%;
+  margin-top: 0.5em;
+  color: grey;
+  font-size: 1rem;
+}
+.hero-content button {
+  border-radius: 15px;
+  border-style: none;
+  padding: 5px 20px;
+  font-weight: bolder;
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  background: lightgreen;
+}
+.hero-img {
+  width: 30%;
+  height: auto;
+}
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.book-section {
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 5em;
+}
+.book-section img {
+  height: 80vh;
+}
+.book-section .about {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+.book-section p {
+  margin-top: 2em;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10001; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-image: url("images/backgroundModal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin: auto;
+  border: 1px solid #888;
+  box-shadow: 2em;
+  width: 30em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  margin-right: 1em;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalHeader {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.modalBody {
+  width: 100%;
+  padding: 5px 80px;
+  display: flex;
+  flex-direction: column;
+}
+#modalBodySignUp,
+#modalBodySignIn {
+  display: none;
+}
+
+.modalBody input[type="text"],
+input[type="password"] {
+  padding: 0.4em 1em;
+  font-size: 1rem;
+  box-shadow: 4px 4px #000;
+  border-radius: 8px;
+  border-style: none;
+}
+
+.modalBody label {
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+}
+
+.modalTabs {
+  display: flex;
+  justify-content: space-evenly;
+  /* border-bottom: white;
+  border-bottom-style: ridge;
+  border-width: 0.2em; */
+}
+.modalTabs button {
+  height: 100%;
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bolder;
+  padding: 0.8em 0;
+  color: white;
+}
+#signInTab {
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+#signUpTab {
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.modalTabs button:active {
+  transform: scale(0.96);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 2em 0 1em 0;
+  margin-bottom: 4em;
+}
+
+#modalBtnLogIn {
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 1em;
+  background: lightgreen;
+  font-weight: bolder;
+  color: black;
+}
+#modalBtnRegister {
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border-style: none;
+  font-weight: bolder;
+  font-size: 1em;
+  background: lightgreen;
+  color: black;
+}
+#modalBtnCancelSignIn,
+#modalBtnCancelRegister {
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border-style: none;
+  font-weight: bolder;
+  font-size: 1em;
+  background: lightcoral;
+  color: black;
+}
+.errorMessage {
+  color: lightcoral;
+}
+.rememberMe {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  color: white;
+  gap: 0.4em;
+}
+
+.battleSection {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.habitsView {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 12px;
+  width: 25%;
+  height: 75%;
+}
+
+@media screen and (max-width: 1024px) {
+  .link-list li {
+    display: none;
+  }
+  .button-list li {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+
+  header {
+    overflow-x: hidden;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .hero-img {
+    width: 60%;
+    height: auto;
+  }
+  .hero-content {
+    width: 80%;
+    height: auto;
+    align-self: center;
+  }
+
+  .book-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0 5em;
+  }
+  .book-section img {
+    height: 40vh;
+  }
+  .book-section .about {
+    font-size: 0.7em;
+  }
+  .gtd {
+    flex-direction: column-reverse;
+  }
+  .modalContent {
+    width: 20em;
+  }
+  .modalBody label {
+    font-size: 1em;
+  }
+  #modalBtnCancel,
+  #modalBtnLogIn,
+  #modalBtnRegister {
+    font-size: 0.7em;
+  }
+}
